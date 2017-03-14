@@ -11,18 +11,18 @@
       $sql = "SELECT USER_ID FROM USER WHERE USERNAME = '$myusername' and PASSWORD = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      #$active = $row['active'];
+    //  $active = $row['active'];
 
       $count = mysqli_num_rows($result);
 
       // If result matched $myusername and $mypassword, table row must be 1 row
 
       if($count == 1) {
-         #session_register("myusername");
+         //session_register("myusername");
          $_SESSION['login_user'] = $myusername;
-         #echo $_SESSION['login_user'];
+         echo $_SESSION['login_user'];
 
-      header("location: http://localhost/kibblebit/workspace/html5up-big-picture/welcome.php");
+      header("location: http://localhost/kibblebit/workspace/html5up-hyperspace/index.php");
         exit();
       }else {
          $error = "Your Login Name or Password is invalid";

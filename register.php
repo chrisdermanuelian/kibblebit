@@ -14,7 +14,7 @@ $lname = mysqli_real_escape_string($db, $_POST['lname']);
 $kibbleid = mysqli_real_escape_string($db, $_POST['kibbleid']);
 
 
-$sql = "INSERT INTO USER (USERNAME, PASSWORD, FNAME, LNAME, KIBBLEID) VALUES ('$uname', '$pword','$fname', '$lname', '$kibbleid')";
+$sql = "INSERT INTO user (username, password, fname, lname, kibbleid) VALUES ('$uname', '$pword','$fname', '$lname', '$kibbleid')";
 
 if(mysqli_query($db, $sql)){
 

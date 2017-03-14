@@ -22,7 +22,7 @@
          $_SESSION['login_user'] = $myusername;
          echo $_SESSION['login_user'];
 
-      header("location: http://localhost/kibblebit/workspace/html5up-hyperspace/index.php");
+      header("location: http://localhost/kibblebit/workspace/html5up-hyperspace/welcome.php");
         exit();
       }else {
          $error = "Your Login Name or Password is invalid";

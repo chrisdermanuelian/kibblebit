@@ -25,5 +25,5 @@ if(mysqli_query($db, $sql)){
 }
 
    mysqli_close($db);
-header("Location: C:\wamp64\www\kibblebit\workspace\login.php");
+header("Location: http://localhost/kibblebit/workspace/html5up-hyperspace/index.php");
 ?>

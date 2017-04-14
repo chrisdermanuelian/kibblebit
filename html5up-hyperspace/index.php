@@ -7,8 +7,8 @@
 
 
 
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="assets/js/ie/html5shiv.js"></script>
   <link rel="stylesheet" href="assets/css/main.css" />
 
 

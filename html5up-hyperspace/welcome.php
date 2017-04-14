@@ -5,8 +5,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <?php
-
+include("C:\wamp64\www\kibblebit\workspace\config.php");
 session_start();
+$greetingNameQuery = "SELECT FNAME FROM USER WHERE USERNAME = '{$_SESSION['login_user']}'";
+$greetingNameResult = mysqli_query($db,$greetingNameQuery);
 
  ?>
 <html>
@@ -42,7 +44,9 @@ session_start();
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-							<h1>Welcome to KibbleBit, <?php echo  $_SESSION["login_user"] ; ?>. </h1>
+							<h1>Welcome to KibbleBit, <?php while($row = mysqli_fetch_array($greetingNameResult)) {
+echo $row['FNAME'];
+} ?>. </h1>
 							<p>Why are you using this? Spend more time with your pet.</p>
 							<ul class="actions">
 								<li><a href="#one" class="button scrolly">Quick Feed</a></li>

@@ -49,7 +49,7 @@ echo $row['FNAME'];
 } ?>. </h1>
 							<p>Why are you using this? Spend more time with your pet.</p>
 							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Quick Feed</a></li>
+								<li><a onclick="requestFeed();" class="button scrolly">Quick Feed</a></li>
 							</ul>
 						</div>
 					</section>
@@ -214,5 +214,26 @@ echo $row['FNAME'];
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 
-	</body>
+
+  </body>
+
+  <script>
+
+function requestFeed(){
+
+      xhr = new XMLHttpRequest();
+var url = "url";
+xhr.open("POST", url, true);
+xhr.setRequestHeader("Content-type", "application/json");
+xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        var json = JSON.parse(xhr.responseText);
+        console.log(json.mydata)
+    }
+}
+var data = JSON.stringify({"mydata":"On"});
+xhr.send(data);
+    }
+
+  </script>
 </html>
